@@ -45,7 +45,8 @@ public class TextHover : MonoBehaviour
 
     public void LoadGame()
     {
-        Application.LoadLevel("MainGame");
+        //Application.LoadLevel("MainGame");
+        Application.LoadLevel("TestingFeild");
     }
 
     public void LoadOptions()
