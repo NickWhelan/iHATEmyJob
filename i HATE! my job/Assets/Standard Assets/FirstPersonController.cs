@@ -54,6 +54,11 @@ public class FirstPersonController : NetworkBehaviour
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
             m_MouseLook.Init(transform, m_Camera.transform);
+            gameObject.layer = 8;
+        }
+        else {
+            m_Camera.enabled = false;
+            m_Camera.GetComponent<AudioListener>().enabled = false;
         }
     }
 

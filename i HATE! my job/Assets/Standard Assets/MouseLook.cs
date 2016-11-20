@@ -49,7 +49,6 @@ public class MouseLook
             character.localRotation = m_CharacterTargetRot;
             camera.localRotation = m_CameraTargetRot;
         }
-
         UpdateCursorLock();
     }
 
