@@ -56,10 +56,6 @@ public class FirstPersonController : NetworkBehaviour
             m_MouseLook.Init(transform, m_Camera.transform);
             gameObject.layer = 8;
         }
-        else {
-            m_Camera.enabled = false;
-            m_Camera.GetComponent<AudioListener>().enabled = false;
-        }
     }
 
 
@@ -68,6 +64,8 @@ public class FirstPersonController : NetworkBehaviour
     {
         if (!isLocalPlayer)
         {
+            m_Camera.enabled = false;
+            m_Camera.GetComponent<AudioListener>().enabled = false;
             return;
        } 
         RotateView();
@@ -109,6 +107,7 @@ public class FirstPersonController : NetworkBehaviour
         {
             return;
         }
+
         float speed;
         GetInput(out speed);
         // always move along the camera forward as it is the direction that it being aimed at
@@ -239,11 +238,11 @@ public class FirstPersonController : NetworkBehaviour
 
         // handle speed change to give an fov kick
         // only if the player is going to a run, is running and the fovkick is to be used
-        if (m_IsWalking != waswalking && m_UseFovKick && m_CharacterController.velocity.sqrMagnitude > 0)
+       /* if (m_IsWalking != waswalking && m_UseFovKick && m_CharacterController.velocity.sqrMagnitude > 0)
         {
             StopAllCoroutines();
             StartCoroutine(!m_IsWalking ? m_FovKick.FOVKickUp() : m_FovKick.FOVKickDown());
-        }
+        }*/
     }
 
 
