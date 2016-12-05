@@ -35,10 +35,15 @@ public class CharacterControl : NetworkBehaviour
     {
         // Grab a component and keep a reference to it
         cc = GetComponent<CharacterController>();
-        playerCamera.transform.position = new Vector3(0.0f, 0.0f, 2.0f);
+        //playerCamera.transform.position = new Vector3(0.0f, 0.0f, 2.0f);
         if (!isLocalPlayer)
         {
+
             playerCamera.enabled = false;
+        }
+        else
+        {
+            gameObject.GetComponent<MeshRenderer>().enabled = false;
         }
     }
 
