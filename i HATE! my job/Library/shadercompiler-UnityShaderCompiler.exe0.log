@@ -1,5 +1,6 @@
 Base path: C:/Program Files/Unity/Editor/Data
 Cmd: getPlatforms
+<<<<<<< HEAD
 Cmd: compileSnippet
   api=4 type=0 insize=7234 outsize=2746 kw=DIRECTIONAL LIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING ok=1
 Cmd: compileSnippet
@@ -36,3 +37,13 @@ Cmd: compileSnippet
   api=4 type=0 insize=986 outsize=2478 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DYNAMICLIGHTMAP_OFF _NORMALMAP pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING ok=1
 Cmd: compileSnippet
   api=4 type=1 insize=986 outsize=6890 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DYNAMICLIGHTMAP_OFF _NORMALMAP pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING ok=1
+=======
+Cmd: preprocess
+  insize=435 outsize=435 ok=1
+Cmd: preprocess
+  insize=1044 outsize=1035 ok=1
+Cmd: preprocess
+  insize=1568 outsize=642 ok=1
+Cmd: preprocess
+  insize=1310 outsize=384 ok=1
+>>>>>>> origin/master

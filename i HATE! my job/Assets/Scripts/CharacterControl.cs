@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-
+using UnityEngine.Networking;
 // Makes sure that the CharacterController Component is added to what ever the script is attached to
 [RequireComponent(typeof(CharacterController))]
-public class CharacterControl : MonoBehaviour
+public class CharacterControl : NetworkBehaviour
 {
+    //is the player a client or remote
+    bool isLocal;
 	// Variables to control speeds for movements
     public float speed = 6.0f;
     public float jumpSpeed = 8.0f;
@@ -24,21 +26,29 @@ public class CharacterControl : MonoBehaviour
 	// Reference to controller used to move the player
     public CharacterController cc;
     public GameObject player;
-    public GameObject playerCamera;
+    public Camera playerCamera;
 
     public int score;
 
     // Use this for initialization
-    void Start ()
+    void Start()
     {
-	    // Grab a component and keep a reference to it
+        // Grab a component and keep a reference to it
         cc = GetComponent<CharacterController>();
         playerCamera.transform.position = new Vector3(0.0f, 0.0f, 2.0f);
+        if (!isLocalPlayer)
+        {
+            playerCamera.enabled = false;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!isLocalPlayer)
+        {
+            return;
+        }
         float rotateSpeedX = Input.GetAxis("Mouse X");
 
         // Use the up and down keys to move the player along the Z-axis
