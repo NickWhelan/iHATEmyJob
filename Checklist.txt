@@ -1,0 +1,7 @@
+- Shaders (yep)
+- Particle Systems (not yet)
+- Ai (not yet)
+- Items (not yet)
+- chat (not yet)
+- trade(not yet)
+- Networking (yep)
